@@ -1,3 +1,4 @@
+import Button from "../components/Button.jsx";
 import React from "react";
 
 const SimulationPage = () => {
@@ -6,6 +7,7 @@ const SimulationPage = () => {
       <h1>
         Welcome to the Main Page
       </h1>
+      <Button />
     </div>
   )
 }
