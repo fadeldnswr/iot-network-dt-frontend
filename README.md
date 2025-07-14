@@ -1,12 +1,31 @@
-# React + Vite
+# 🌐 Digital Twin Dashboard (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend interface for the **Digital Twin Dashboard**, a web-based platform designed to visualize, simulate, and evaluate the performance of real-time IoT data against simulated data. It features interactive graphs, performance metrics (MAE, MSE, RMSE, MAPE), and statistical summaries from ESP32-based IoT networks.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
 
-## Expanding the ESLint configuration
+- ⚛️ **React.js** – Frontend framework
+- 📦 **Axios** – API client for communicating with FastAPI backend
+- 📊 **Recharts** – For interactive graph visualization
+- 💨 **Tailwind CSS** – Utility-first CSS framework
+- 🧪 **Vite** – Development build tool
+- 🌐 **Supabase** – As a backend database (via API)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Features
+
+- 📈 **Graphing (Line Chart)** of simulated vs. real IoT data  
+- 📊 **Performance Metrics**: MAE, MSE, RMSE, MAPE  
+- 📋 **Statistical Summary**: Mean, Median, Std. Dev (actual & simulated)  
+- 🧠 **Dynamic Simulation Controls**: Start date, duration, and category  
+- 💡 **Dark Mode UI** with modern layout and sidebar navigation  
+
+## 📸 Sample Preview
+![alt text](image.png)
+
+### 🧑‍💻 Author
+Built with 💡 by Fadel Daniswara
+Electrical Engineering @ Universitas Indonesia | AIoT & Digital Twin Enthusiast
