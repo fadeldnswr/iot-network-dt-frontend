@@ -1,10 +1,11 @@
+import React from 'react';
 
-const Button = () => {
+const Button = ({ label, onClick }) => {
   return (
-    <button className="btn btn-primary">
-      Submit
+    <button onClick={onClick} className="btn btn-primary mt-4 ml-[200px] w-40 font-[Poppins]">
+      {label}
     </button>
-  )
-}
+  );
+};
 
 export default Button;

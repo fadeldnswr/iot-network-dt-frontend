@@ -1,16 +1,46 @@
+import Dropdown from "../components/Dropdown.jsx";
+import Button from "../components/Button.jsx";
 import Graphs from "../components/Graphs.jsx";
 import Navbar from "../components/Navbar.jsx";
 import Sidebar from "../components/Sidebar.jsx";
-import React from "react";
+
+import React, { useState } from "react";
 
 const SimulationPage = () => {
+  const [dataType, setDataType] = useState("temperature");
+  const [hours, setHours] = useState(1);
+  const [startDate, setStartDate] = useState("2025-05-12T12:00:00")
+
   return (
     <div className="flex min-h-screen bg-gray-800 text-white" >
       <Sidebar />
       <div className="flex-1 h-4">
         <Navbar />
-        <h1 className="text-3xl font-bold font-[Poppins] leading-snug ml-[200px] mt-[100px]">Welcome to<br />Digital Twin Dashboard!</h1>
+        <h1 className="text-3xl font-bold font-[Poppins] leading-snug ml-[200px] mt-[60px]">
+          Welcome to<br />Digital Twin Dashboard!
+        </h1>
+        <div className="grid grid-cols-3 gap-y-2 mt-4 items-start max-w-[960px] ml-[100px]">
+          <Dropdown 
+            label="Choose data" 
+            options={["temperature", "humidity", "latency", "rssi"]}
+            value={dataType}
+            onChange={(e) => setDataType(e.target.value)}
+            />
+          <Dropdown 
+            label="Simulated Hours" 
+            options={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+            value={hours}
+            onChange={(e) => setHours(e.target.value)}
+            />
+          <Dropdown 
+            label="Start Date" 
+            options={["2025-05-12T12:00:00", "2025-05-12T13:00:00", "2025-05-12T14:00:00", "2025-05-12T15:00:00"]}
+            value={startDate}
+            onChange={(e) => setStartDate(e.target.value)}
+            />
+        </div>
         <Graphs />  
+        <Button label="Simulate" />
       </div>
     </div>
   )

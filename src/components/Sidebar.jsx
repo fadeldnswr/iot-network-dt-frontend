@@ -2,7 +2,7 @@ import React from 'react';
 
 const Sidebar = () => {
   return (
-    <div className="menu p-4 w-60 min-h-screen bg-base-200 text-base-content">
+    <div className="menu p-4 w-60 min-h-screen bg-base-200 text-base-content pt-[250px] font-[Poppins]">
       <ul>
         <li className="mb-2 font-bold text-lg">Simulation</li>
         <li className="mb-2 text-gray-400">Prediction</li>
