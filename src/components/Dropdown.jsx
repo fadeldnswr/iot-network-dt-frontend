@@ -6,7 +6,7 @@ const Dropdown = ({ label, options, value, onChange }) => {
       <label className="block mb-1">
         <span className="label-text text-white text-sm font-[Poppins] font-medium">{label}</span>
       </label>
-      <select className="select select-bordered w-64" value={value} onChange={onChange}>
+      <select className="select select-bordered w-64 font-medium font-[Poppins]" value={value} onChange={onChange}>
         {options.map((option, index) => (
           <option key={index} value={option}>{option}</option>
         ))}
