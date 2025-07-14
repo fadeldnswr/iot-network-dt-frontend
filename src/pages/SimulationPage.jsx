@@ -5,11 +5,32 @@ import Navbar from "../components/Navbar.jsx";
 import Sidebar from "../components/Sidebar.jsx";
 
 import React, { useState } from "react";
+import ErrorMetrics from "../components/ErrorMetrics.jsx";
+import StatsSummary from "../components/StatsSummary.jsx";
 
 const SimulationPage = () => {
   const [dataType, setDataType] = useState("temperature");
   const [hours, setHours] = useState(1);
   const [startDate, setStartDate] = useState("2025-05-12T12:00:00")
+
+    const metrics = {
+    MAE: 0,
+    MAPE: 0,
+    MSE: 0,
+    RMSE: 0,
+  };
+
+  const actualStats = {
+    mean: 0,
+    median: 0,
+    std: 0,
+  };
+
+  const simulatedStats = {
+    mean: 0,
+    median: 0,
+    std: 0,
+  };
 
   return (
     <div className="flex min-h-screen bg-gray-800 text-white" >
@@ -39,8 +60,16 @@ const SimulationPage = () => {
             onChange={(e) => setStartDate(e.target.value)}
             />
         </div>
-        <Graphs />  
-        <Button label="Simulate" />
+        <div className="grid grid-cols-2 gap-4 max-w-6xl">
+          <div className="flex-1">
+            <Graphs />  
+            <Button label="Simulate" />
+          </div>
+          <div className="w-[420px] flex flex-col gap-4 ml-[520px] mt-2">
+            <ErrorMetrics metrics={metrics}/>
+            <StatsSummary simulated={simulatedStats} actual={actualStats}/>
+          </div>
+        </div>
       </div>
     </div>
   )
