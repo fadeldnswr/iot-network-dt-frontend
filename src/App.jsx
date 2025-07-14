@@ -1,5 +1,5 @@
 import './App.css'
-import SimulationPage from './pages/SimulationPage'
+import SimulationPage from './pages/SimulationPage.jsx'
 
 function App() {
 
